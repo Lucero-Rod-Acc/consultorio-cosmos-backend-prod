@@ -1,0 +1,9 @@
+[build]
+builder = "maven"
+buildCommand = "mvn clean package -DskipTests"
+
+[deploy]
+startCommand = "java -Dserver.port=$PORT -jar target/*.jar"
+
+[env]
+JAVA_VERSION = "17"
